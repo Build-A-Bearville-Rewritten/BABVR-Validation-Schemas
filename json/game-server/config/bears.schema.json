@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bears Config",
+  "description": "Configuration for the bears nurturing system",
+  "type": "object",
+  "properties": {
+    "nurturingSystem": {
+      "$ref": "#/definitions/INurturingSystem"
+    }
+  },
+  "required": ["nurturingSystem"],
+  "additionalProperties": false,
+  "definitions": {
+    "INurturingSystem": {
+      "description": "Configuration for the nurturing system",
+      "type": "object",
+      "properties": {
+        "needs": {
+          "description": "List of needs for the nurturing system",
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/definitions/INurturingSystemNeed"
+          }
+        }
+      },
+      "required": ["needs"],
+      "additionalProperties": false
+    },
+    "INurturingSystemNeed": {
+      "description": "A need for the nurturing system",
+      "type": "object",
+      "properties": {
+        "needId": {
+          "description": "Unique identifier for the need",
+          "type": "number",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "value": {
+          "description": "The value for the need",
+          "type": "number"
+        }
+      },
+      "required": ["needId", "value"],
+      "additionalProperties": false
+    }
+  }
+}
