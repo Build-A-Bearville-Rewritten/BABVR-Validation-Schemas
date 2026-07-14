@@ -1,78 +1,78 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Planet Config",
-  "description": "Configuration for the game's planet",
-  "type": "object",
-  "properties": {
-    "planetData": {
-      "description": "List of planet areas and their configurations",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/IPlanetData"
-      }
-    }
-  },
-  "required": ["planetData"],
-  "additionalProperties": false,
-  "definitions": {
-    "IPlanetData": {
-      "description": "Configuration for a specific planet area",
-      "type": "object",
-      "properties": {
-        "areaId": {
-          "description": "Unique identifier for the area",
-          "type": "number"
-        },
-        "backgroundName": {
-          "description": "Name of the background image of the area",
-          "type": "string"
-        },
-        "dynamicParameter": {
-          "description": "Dynamic parameter for the planet area",
-          "type": "string"
-        },
-        "dynamicTypeId": {
-          "description": "Type identifier for the dynamic parameter",
-          "type": "number"
-        },
-        "isUnderWater": {
-          "description": "Whether it should rain on the planet area",
-          "type": "number"
-        },
-        "isWithBear": {
-          "description": "Whether players can walk with bears on the planet area",
-          "type": "number"
-        },
-        "path": {
-          "description": "Path for the planet area",
-          "type": "string"
-        },
-        "planetId": {
-          "description": "Unique identifier for the planet area",
-          "type": "number"
-        },
-        "resourceId": {
-          "description": "Identifier for the resource",
-          "type": "number"
-        },
-        "worldZoneId": {
-          "description": "Identifier for the world zone",
-          "type": "number"
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Planet Config",
+    "description": "Configuration for the game's planet",
+    "type": "object",
+    "properties": {
+        "planetData": {
+            "description": "List of planet areas and their configurations",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/IPlanetData"
+            }
         }
-      },
-      "required": [
-        "areaId",
-        "backgroundName",
-        "dynamicParameter",
-        "dynamicTypeId",
-        "isUnderWater",
-        "isWithBear",
-        "path",
-        "planetId",
-        "resourceId",
-        "worldZoneId"
-      ],
-      "additionalProperties": false
+    },
+    "required": ["planetData"],
+    "additionalProperties": false,
+    "definitions": {
+        "IPlanetData": {
+            "description": "Configuration for a specific planet area",
+            "type": "object",
+            "properties": {
+                "areaId": {
+                    "description": "Unique identifier for the area",
+                    "type": "number"
+                },
+                "backgroundName": {
+                    "description": "Name of the background image of the area",
+                    "type": "string"
+                },
+                "dynamicParameter": {
+                    "description": "Dynamic parameter for the planet area",
+                    "type": "string"
+                },
+                "dynamicTypeId": {
+                    "description": "Type identifier for the dynamic parameter",
+                    "type": "number"
+                },
+                "isUnderWater": {
+                    "description": "Whether it should rain on the planet area",
+                    "type": "number"
+                },
+                "isWithBear": {
+                    "description": "Whether players can walk with bears on the planet area",
+                    "type": "number"
+                },
+                "path": {
+                    "description": "Path for the planet area",
+                    "type": "string"
+                },
+                "planetId": {
+                    "description": "Unique identifier for the planet area",
+                    "type": "number"
+                },
+                "resourceId": {
+                    "description": "Identifier for the resource",
+                    "type": "number"
+                },
+                "worldZoneId": {
+                    "description": "Identifier for the world zone",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "areaId",
+                "backgroundName",
+                "dynamicParameter",
+                "dynamicTypeId",
+                "isUnderWater",
+                "isWithBear",
+                "path",
+                "planetId",
+                "resourceId",
+                "worldZoneId"
+            ],
+            "additionalProperties": false
+        }
     }
-  }
 }
