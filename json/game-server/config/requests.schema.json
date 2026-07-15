@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Requests Config",
+    "description": "Configuration for the game's request limits",
+    "type": "object",
+    "properties": {
+        "maximumRequests": {
+            "description": "Maximum number of requests allowed",
+            "type": "number"
+        }
+    },
+    "required": ["maximumRequests"],
+    "additionalProperties": false
+}
