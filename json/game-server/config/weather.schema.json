@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Weather Config",
+    "description": "Configuration for the game's weather system",
+    "type": "object",
+    "properties": {
+        "weatherStatus": {
+            "description": "List of weather statuses",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/IWeatherStatus"
+            }
+        }
+    },
+    "required": ["weatherStatus"],
+    "additionalProperties": false,
+    "definitions": {
+        "IWeatherStatus": {
+            "description": "Configuration for a specific weather status",
+            "type": "object",
+            "properties": {
+                "shouldApplyWeather": {
+                    "description": "Whether this weather should be applied",
+                    "type": "boolean"
+                },
+                "weatherId": {
+                    "description": "Unique identifier for the weather",
+                    "type": "number"
+                }
+            },
+            "required": ["shouldApplyWeather", "weatherId"],
+            "additionalProperties": false
+        }
+    }
+}
