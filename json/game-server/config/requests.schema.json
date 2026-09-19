@@ -4,11 +4,26 @@
     "description": "Configuration for the game's request limits",
     "type": "object",
     "properties": {
-        "maximumRequests": {
-            "description": "Maximum number of requests allowed",
-            "type": "number"
+        "maximumExtensionRequests": {
+            "description": "Maximum number of extension requests allowed in a single chunk",
+            "type": "integer",
+            "minimum": 1
+        },
+        "maximumExtensionRequestParameterLength": {
+            "description": "Maximum length allowed for a single extension request parameter",
+            "type": "integer",
+            "minimum": 1
+        },
+        "maximumSocketDataLength": {
+            "description": "Maximum length allowed for incoming socket data",
+            "type": "integer",
+            "minimum": 1
+        },
+        "maximumXmlRequestLength": {
+            "description": "Maximum length allowed for an XML request",
+            "type": "integer",
+            "minimum": 1
         }
     },
-    "required": ["maximumRequests"],
     "additionalProperties": false
 }
